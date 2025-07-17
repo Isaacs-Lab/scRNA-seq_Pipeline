@@ -12,9 +12,9 @@ setup_to_qc()
     local input_dir="${1}" # string: path to input directory
     local output_dir="${2}" # string: path to output directory
     local sample_path="${3}" # string: path to sample.csv file
-    local macs2="${4}" # boolean: run macs2 (in R)
-    local scrub="${5}" # boolean: run scrub (in python)
-    local project="${6}"
+    #local macs2="${4}" # boolean: run macs2 (in R)
+    local scrub="${4}" # boolean: run scrub (in python)
+    local project="${5}"
     local gene_dir="${output_dir}"/genes/ # string: path to gene directory
 
 
