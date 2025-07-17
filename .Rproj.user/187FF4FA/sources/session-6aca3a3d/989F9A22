@@ -1,0 +1,26 @@
+{
+    "id": "989F9A22",
+    "path": "/igm/projects/HD-BAT_Wedemeyer/HD-BAT_Functions/scRNA-seq_Pipeline/code/Rscripts/gex_functions.R",
+    "project_path": "code/Rscripts/gex_functions.R",
+    "type": "r_source",
+    "hash": "1766719084",
+    "contents": "",
+    "dirty": false,
+    "created": 1752245857910.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "277,0",
+        "scrollLine": "252"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1752760040,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1752760040,
+    "read_only": false,
+    "read_only_alternatives": []
+}
