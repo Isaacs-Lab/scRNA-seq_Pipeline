@@ -1,8 +1,8 @@
 ##############################################
-# MULTIOME ANALYSIS PIPELINE
+# GEX ANALYSIS PIPELINE
 # Author: Gary Schweickart - Wedemeyer Lab
-# Created: 8/27/24      
-# Last Updated: 3/21/25
+# Created: 7/15/25    
+# Last Updated: 7/18/25
 ###############################################
 
 setup_to_qc() 
@@ -24,7 +24,7 @@ setup_to_qc()
     mkdir "${output_dir}"/scrub
 
     echo Running scrublet...
-    source /igm/projects/HD-BAT_Wedemeyer/HD-BAT_Functions/multiome_analysis_pipeline/multiome_analysis_pipeline/code/sh_scripts/scrub.sh; scrub "$input_dir" \
+    source code/sh_scripts/scrub.sh; scrub "$input_dir" \
                              "$output_dir"/scrub \
                              "$gene_dir" \
                              "$sample_path"
@@ -34,7 +34,7 @@ setup_to_qc()
     module rm python-3.11.4
     
     echo Running multiome pipeline to QC
-    Rscript --vanilla /igm/projects/HD-BAT_Wedemeyer/HD-BAT_Functions/multiome_analysis_pipeline/multiome_analysis_pipeline/code/Rscripts/multome_to_QC.R "${input_dir}" "${output_dir}" "${sample_path}" "${macs2}" "${scrub}" "${project}" 
+    Rscript --vanilla code/Rscripts/multome_to_QC.R "${input_dir}" "${output_dir}" "${sample_path}" "${macs2}" "${scrub}" "${project}" 
     echo Done.
 }
 
@@ -48,6 +48,6 @@ qc_merge()
     local integrate="${4}" # boolean: whether to integrate or not
     
     echo Running multiome pipeline to QC
-    Rscript --vanilla /igm/projects/HD-BAT_Wedemeyer/HD-BAT_Functions/multiome_analysis_pipeline/multiome_analysis_pipeline/code/Rscripts/QC_merge.R "${input_dir}" "${output_dir}" "${qc_vals}" "${integrate}"
+    Rscript --vanilla code/Rscripts/QC_merge.R "${input_dir}" "${output_dir}" "${qc_vals}" "${integrate}"
     echo Done.
 }

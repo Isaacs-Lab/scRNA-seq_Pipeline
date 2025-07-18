@@ -1,8 +1,8 @@
 #----------------------------------
-# Multiome pipeline to QC
+# GEX pipeline to QC
 ### Author: Gary Schweickart
-### Created: 9/17/24
-### Updated: 2/11/25
+### Created: 7/15/25
+### Updated: 
 #----------------------------------
 
 # Load required packages
